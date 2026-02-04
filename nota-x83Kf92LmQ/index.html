@@ -1,61 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Para ti</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para ti ❤️</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #fafafa;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
       margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
     }
+
     .card {
-      max-width: 500px;
       background: white;
-      padding: 2em;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1s ease;
     }
+
     h1 {
-      font-size: 1.4em;
-      margin-bottom: 0.5em;
+      margin-top: 0;
+      font-size: 1.8rem;
+      color: #ff5a7a;
     }
+
     p {
+      font-size: 1.1rem;
       line-height: 1.6;
-      font-size: 1.05em;
+      margin: 1.2rem 0 0;
     }
-    .date {
-      margin-top: 1.5em;
-      font-size: 0.85em;
-      color: #777;
-      text-align: right;
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Hola ❤️</h1>
-
-    <p>
-      Hoy solo quería recordarte algo sencillo:  
-      me gusta mucho compartir la vida contigo.
-    </p>
-
-    <p>
-      A veces las cosas importantes no son grandes discursos,  
-      sino estos pequeños momentos que vamos sumando.
-    </p>
-
-    <div class="date">
-      Actualizado: febrero 2026
-    </div>
+    <h1 id="title">Hola, amor ❤️</h1>
+    <p id="message"></p>
+    <div class="footer">Escaneado con amor ✨</div>
   </div>
+
+  <script>
+    // ✏️ CAMBIA AQUÍ EL MENSAJE CUANDO QUIERAS
+    const mensajeActual = "Hoy solo quería recordarte lo mucho que te quiero y lo importante que eres para mí 💕";
+
+    // Si algún día quieres usar varios mensajes:
+    // const mensajes = ["Mensaje 1", "Mensaje 2", "Mensaje 3"];
+    // const mensajeActual = mensajes[Math.floor(Math.random() * mensajes.length)];
+
+    document.getElementById('message').textContent = mensajeActual;
+  </script>
 </body>
 </html>
-
