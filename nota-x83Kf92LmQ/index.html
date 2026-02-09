@@ -6,90 +6,49 @@
   <title>Para ti ❤️</title>
 
   <style>
-    :root {
-      --bg1: #f2f3f5;
-      --bg2: #e6e8eb;
-      --card: #ffffff;
-      --text: #2b2b2b;
-      --soft: #888;
-      --accent: #ff6b81;
-    }
-
-    body.dark {
-      --bg1: #1f1f24;
-      --bg2: #141418;
-      --card: #26262c;
-      --text: #f1f1f1;
-      --soft: #aaa;
-    }
-
     body {
       margin: 0;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      background: linear-gradient(135deg, #f2f3f5, #e6e8eb);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--text);
-      transition: background 0.4s;
+      color: #2b2b2b;
     }
 
     .card {
-      background: var(--card);
-      padding: 2.6rem 2.2rem;
+      background: #ffffff;
+      padding: 3rem 2.6rem;
       border-radius: 22px;
       max-width: 420px;
       text-align: center;
       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
-      animation: fadeIn 1s ease;
+      animation: fadeIn 1.2s ease;
     }
 
     h1 {
-      margin-top: 0;
+      margin: 0 0 1.4rem;
       font-size: 1.9rem;
-      letter-spacing: 0.5px;
+      font-weight: 600;
     }
 
     p {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      margin-top: 1.4rem;
-      min-height: 4.5em;
-    }
-
-    .controls {
-      margin-top: 1.6rem;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    button {
-      border: none;
-      background: var(--accent);
-      color: white;
-      padding: 8px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 0.85rem;
-    }
-
-    button:hover {
-      opacity: 0.9;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin: 0;
     }
 
     .footer {
       margin-top: 2rem;
       font-size: 0.85rem;
-      color: var(--soft);
+      color: #888;
     }
 
     @keyframes fadeIn {
       from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(12px);
       }
       to {
         opacity: 1;
@@ -102,50 +61,13 @@
 <body>
   <div class="card">
     <h1>Hola, amor ❤️</h1>
-    <p id="message"></p>
-
-    <div class="controls">
-      <button onclick="nuevoMensaje()">💌 Otro mensaje</button>
-      <button onclick="toggleDark()">🌙</button>
-    </div>
-
-    <div class="footer">
-      De tu Ardillita 🐿️
-    </div>
+    <p>
+      Solo quería recordarte lo mucho que te amo  
+      y lo importante que eres para mí 💕
+    </p>
+    <div class="footer">De tu Ardillita 🐿️</div>
   </div>
-
-  <script>
-    const mensajes = [
-      "Solo quería recordarte lo mucho que te amo y lo importante que eres para mí 💕",
-      "Eres mi lugar seguro, incluso en los días difíciles 🤍",
-      "Pensarte siempre me arranca una sonrisa tonta 😊",
-      "No importa el día, contigo siempre es mejor ❤️",
-      "Gracias por existir y por elegirme cada día 🫶"
-    ];
-
-    const messageEl = document.getElementById("message");
-
-    function escribir(texto) {
-      messageEl.textContent = "";
-      let i = 0;
-      const interval = setInterval(() => {
-        messageEl.textContent += texto[i];
-        i++;
-        if (i === texto.length) clearInterval(interval);
-      }, 35);
-    }
-
-    function nuevoMensaje() {
-      const random = Math.floor(Math.random() * mensajes.length);
-      escribir(mensajes[random]);
-    }
-
-    function toggleDark() {
-      document.body.classList.toggle("dark");
-    }
-
-    nuevoMensaje();
-  </script>
 </body>
 </html>
+
 
